@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;0,800;0,900;1,400;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/418e495172.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="background">
+        <header class="header-container">
+            <div class="header center-div">
+                <div class="logo">Brand LOGO</div>
+                <div class="center-div nav-gap nav">
+                    <div>Home</div>
+                    <div>Events</div>
+                    <div>Gallery</div>
+                </div>
+                <div>
+                    <button class="btn-primary">Donate</button>
+                </div>
+            </div>
+        </header>
+        <div class="hero-text">
+            <h1 style="margin-bottom: 0;">Invest in the Future of the country</h1>
+            <h2 style="margin: 0 0 30px;">Help Underprivileged Children Thrive</h2>
+            <div class="center-div"><button class="btn-sec">Donate Today</button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="section-2">
+            <div class="torn-paper">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis alias veritatis ipsam sequi totam
+                fuga? Reprehenderit pariatur architecto fuga praesentium harum veniam consequatur dicta illum quo
+                libero! Praesentium, aliquam magnam!
+            </div>
+            <div class="right-panel">
+                <h2 class="sub-heading">Your donation directly goes to the education of the needy</h2>
+                <div class="right-panel-img">
+                    <img src=cheque1.jpg alt="" height=250>
+                    <img src=cheque2.jpg alt="" height=250>
+                    <img src=cheque4.jpg alt="" height=250>
+                </div>
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod asperiores beatae
+                    harum temporibus
+                    minus fuga voluptates eum ipsum culpa quaerat. Maiores est harum soluta dolore mollitia quasi
+                    voluptate corporis fugiat!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aut, esse quis ipsa voluptatum
+                    fugit. Eos ipsum nobis sit, quisquam obcaecati unde provident nisi veritatis distinctio. Ab eaque
+                    deleniti temporibus?</p>
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod asperiores beatae
+                    harum temporibus
+                    minus fuga voluptates eum ipsum culpa quaerat. Maiores est harum soluta dolore mollitia quasi
+                    voluptate corporis fugiat!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eos labore doloremque aut
+                    possimus sunt obcaecati non eius tempore modi quasi iure unde sint minus, sapiente, accusantium
+                    perferendis earum nesciunt.</p>
+
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="cards-component">
+            <div class="card">
+                <p><img src="heart.png" alt="" height="70"></p>
+                <div class="counter"></div>
+                <p>Number of Doners</p>
+            </div>
+            <div class="card">
+                <p><img src="team.png" alt="" height="70"></p>
+                <div class="counter"></div>
+                <p>Number of volunteers </p>
+            </div>
+            <div class="card">
+                <p><img src="kids-couple.png" alt="" height="70"></p>
+                <div class="counter"></div>
+                <p>Number of Children helped!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <div class="container">
+        <div class="text">
+            <h1>This is a Powerful Text </h1>
+        </div>
+        <div class="background">
+            <div class="gradient"></div>
+        </div>
+
+    </div> -->
+</body>
+<svg>
+    <filter id="wavy2">
+        <feTurbulence x="0" y="0" baseFrequency="0.005 0" numOctaves="5" seed="1" />
+        <feDisplacementMap in="SourceGraphic" scale="80" />
+    </filter>
+
+</svg>
+
+<script>
+    /* // get the element to animate */
+
+    var element = document.getElementsByClassName('counter');
+    var elementHeight = element[0].clientHeight;
+
+    /* // listen for scroll event and call animate function */
+    document.addEventListener('scroll', animate);
+    console.log("elements", element)
+
+    /* // check if element is in view */
+    function inView() {
+        /* // get window height */
+        var windowHeight = window.innerHeight;
+        /* // get number of pixels that the document is scrolled */
+        var scrollY = window.scrollY || window.pageYOffset;
+
+        /* // get current scroll position (distance from the top of the page to the bottom of the current viewport) */
+        var scrollPosition = scrollY + windowHeight;
+        /* // get element position (distance from the top of the page to the bottom of the element) */
+        var elementPosition = element[0].getBoundingClientRect().top + scrollY + elementHeight;
+
+        /* // is scroll position greater than element position? (is element in view?) */
+        if (scrollPosition > elementPosition) {
+            console.log("in position")
+            return true;
+        }
+
+        return false;
+    }
+
+    /* // animate element when it is in view */
+    function animate() {
+        /* // is element in view? */
+        if (inView()) {
+            /* // element is in view, add class to element */
+            element[0].classList.add('animate');
+            element[1].classList.add('animate-1');
+            element[2].classList.add('animate-2');
+        }
+    }
+</script>
+
+</html>
